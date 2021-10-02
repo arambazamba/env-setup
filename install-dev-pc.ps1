@@ -28,6 +28,8 @@ choco install microsoftazurestorageexplorer -y
 choco install azure-data-studio -y
 choco install postman -y
 choco install ngrok -y
+choco install 7zip -y
+choco install adobereader -y
 
 # General Software
 
@@ -46,6 +48,9 @@ $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";"
 # Install httprepl
 dotnet tool install -g Microsoft.dotnet-httprepl
 dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
+
+# Turn off Taskbar grouping
+Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name TaskbarGlomLevel -Value 2
 
 # Intall VS Code Extensions
 Write-Host "VS Code Extensions - 5/6" -ForegroundColor yellow

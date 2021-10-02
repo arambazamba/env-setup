@@ -87,6 +87,12 @@ function InstallPackages
     choco install microsoft-windows-terminal -y
     choco install certifytheweb -y
     choco install sql-server-management-studio -y
+    choco install 7zip -y
+    choco install adobereader -y
+}
+
+function DisableTaskbarGrouping{
+    Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name TaskbarGlomLevel -Value 2
 }
 
 function InstallVSCode
@@ -118,3 +124,4 @@ AddUsability
 InstallChoco
 InstallPackages
 InstallVSCode
+DisableTaskbarGrouping
