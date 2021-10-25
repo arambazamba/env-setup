@@ -19,7 +19,7 @@ Write-Host "Refresh Path Env - 3/6" -ForegroundColor yellow
 
 choco install dotnetcore-sdk -y
 choco install dotnet-5.0-sdk -y
-choco install nvm
+choco install nvm -y
 choco install azure-cli -y
 choco install azure-functions-core-tools-3 --params="'/x64:true'" -y
 choco install azurestorageemulator -y
@@ -30,6 +30,7 @@ choco install postman -y
 choco install ngrok -y
 choco install 7zip -y
 choco install adobereader -y
+choco install displayfusion -y
 
 # General Software
 
@@ -72,6 +73,8 @@ code --install-extension CoenraadS.bracket-pair-colorizer-2
 code --install-extension mdickin.markdown-shortcuts
 code --install-extension mhutchie.git-graph 
 code --install-extension humao.rest-client
+
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 
 # Install Node
 
