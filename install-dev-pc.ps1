@@ -47,6 +47,10 @@ Write-Host "Refresh Path Env - 4/6" -ForegroundColor yellow
 
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 
+# Setup Git
+git config --global user.name "Alexander Pajer"
+git config --global user.email "alexander.pajer@integrations.at"
+
 # Install httprepl
 dotnet tool install -g Microsoft.dotnet-httprepl
 dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
