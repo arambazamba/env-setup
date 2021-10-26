@@ -30,7 +30,6 @@ choco install azurestorageemulator -y
 choco install azurepowershell -y
 choco install microsoftazurestorageexplorer -y
 choco install azure-data-studio -y
-choco install postman -y
 choco install ngrok -y
 choco install 7zip -y
 choco install adobereader -y
