@@ -37,6 +37,7 @@ choco install displayfusion -y
 choco install microsoft-teams -y
 choco install microsoft-windows-terminal -y
 choco install telegram -y
+choco install signal -y
 choco install googlephotos -y
 choco install spotify -y
 choco install sql-server-management-studio -y
