@@ -1,3 +1,7 @@
+# Settings vars
+$User="Alexander Pajer"
+$EMAIL="alexander.pajer@integrations.at"
+
 # Install chocolatey
 Write-Host "Installing Chocolatey - 1/6" -ForegroundColor yellow
 
@@ -48,8 +52,8 @@ Write-Host "Refresh Path Env - 4/6" -ForegroundColor yellow
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 
 # Setup Git
-git config --global user.name "Alexander Pajer"
-git config --global user.email "alexander.pajer@integrations.at"
+git config --global user.name $User
+git config --global user.email $EMAIL
 
 # Install httprepl
 dotnet tool install -g Microsoft.dotnet-httprepl
