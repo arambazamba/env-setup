@@ -18,13 +18,14 @@ Write-Host "Refresh Path Env - 2/6" -ForegroundColor yellow
 choco install googlechrome -y
 choco install vscode -y
 choco install git -y
+choco install gh -y
 
 # Install Software
 Write-Host "Refresh Path Env - 3/6" -ForegroundColor yellow
 
 choco install dotnetcore-sdk -y
 choco install dotnet-6.0-sdk -y
-choco install nvm -y
+choco install nodejs --version=14.15.0 -y
 choco install azure-cli -y
 choco install azurepowershell -y
 choco install microsoftazurestorageexplorer -y
@@ -35,13 +36,10 @@ choco install adobereader -y
 choco install displayfusion -y
 
 # General Software
-
 choco install microsoft-teams -y
 choco install microsoft-windows-terminal -y
-choco install telegram -y
-choco install signal -y
 choco install googlephotos -y
-choco install spotify -y
+choco install filezilla -y
 
 # Refresh Path Env
 Write-Host "Refresh Path Env - 4/6" -ForegroundColor yellow

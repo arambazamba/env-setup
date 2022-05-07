@@ -6,9 +6,7 @@ Install Windows Subsystem for Linux
 wsl --install
 ```
 
-Reboot PC
-
-Start Ubuntu und set initial credentials
+Reboot PC -> Start Ubuntu und set initial credentials
 
 Create hushlogin:
 

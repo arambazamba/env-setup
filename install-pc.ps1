@@ -18,6 +18,7 @@ Write-Host "Refresh Path Env - 2/6" -ForegroundColor yellow
 choco install googlechrome -y
 choco install vscode -y
 choco install git -y
+choco install gh -y
 choco install gitextensions -y
 
 # Install Software
@@ -46,6 +47,7 @@ choco install adobereader -y
 choco install displayfusion -y
 choco install onedrive -y 
 choco install snagit -y 
+choco install filezilla -y
 
 # Refresh Path Env
 Write-Host "Refresh Path Env - 4/6" -ForegroundColor yellow
