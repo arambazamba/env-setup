@@ -6,7 +6,7 @@
 - Run `install-pc.ps1` to setup base software and settings personal pc
 - Run `install-dev-pc.ps1` to setup base software and settings for a Developer PC
 
->Note: Adjust your scripts by adding [packages](https://community.chocolatey.org/packages) from [Chocolated](https://community.chocolatey.org/)
+>Note: Adjust your scripts by adding [packages](https://community.chocolatey.org/packages) from [Chocolatey - the package manager for Windows](https://community.chocolatey.org/)
 
 # Additional Setup
 
