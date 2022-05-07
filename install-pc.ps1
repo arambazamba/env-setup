@@ -1,6 +1,6 @@
 # Settings vars
-$User="Alexander Pajer"
-$EMAIL="alexander.pajer@integrations.at"
+$User="Ernst Stöger"
+$EMAIL="ernst.stoeger@integrations.at"
 
 # Install chocolatey
 Write-Host "Installing Chocolatey - 1/6" -ForegroundColor yellow
@@ -16,31 +16,34 @@ Write-Host "Refresh Path Env - 2/6" -ForegroundColor yellow
 choco install googlechrome -y
 choco install vscode -y
 choco install git -y
+choco install gitextensions -y
 
 # Install Software
 Write-Host "Refresh Path Env - 3/6" -ForegroundColor yellow
 
 choco install dotnetcore-sdk -y
 choco install dotnet-6.0-sdk -y
-choco install nvm -y
+choco install nodejs --version=14.15.0 -y
 choco install azure-cli -y
 choco install azurepowershell -y
 choco install microsoftazurestorageexplorer -y
 choco install azure-data-studio -y
 choco install ngrok -y
-choco install 7zip -y
-choco install adobereader -y
-choco install displayfusion -y
+choco install microsoft-windows-terminal -y
+choco install sql-server-management-studio -y
 
 # General Software
 
 choco install microsoft-teams -y
-choco install microsoft-windows-terminal -y
 choco install telegram -y
 choco install signal -y
 choco install googlephotos -y
 choco install spotify -y
-choco install sql-server-management-studio -y
+choco install 7zip -y
+choco install adobereader -y
+choco install displayfusion -y
+choco install onedrive -y 
+choco install snagit -y 
 
 # Refresh Path Env
 Write-Host "Refresh Path Env - 4/6" -ForegroundColor yellow
@@ -50,10 +53,6 @@ $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";"
 # Setup Git
 git config --global user.name $User
 git config --global user.email $EMAIL
-
-# Install httprepl
-dotnet tool install -g Microsoft.dotnet-httprepl
-dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
 
 # Turn off Taskbar grouping
 Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name TaskbarGlomLevel -Value 2
@@ -80,33 +79,8 @@ code --install-extension humao.rest-client
 
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 
-# Install Node
-nvm install 12.20.0
-nvm install 14.18.0
-nvm use 14.18.0
-
-# Install Azure Function Core Tools
-npm install -g azure-functions-core-tools@4 --unsafe-perm true
-
-# Install Angular
-Write-Host "Installing Angular - 6/6" -ForegroundColor yellow
-
 npx @angular/cli@latest analytics off
 npm i -g @angular/cli
-
-# Azurite Storage Emulator
-npm install -g azurite
-
-# Base Toolset M365 Related
-npm i -g webpack webpack-cli
-npm i -g gulp yo @microsoft/generator-sharepoint
-npm i -g @pnp/cli-microsoft365
-npm i -g generator-teams
-npm i -g yo generator-office
-npm i -g spfx-fast-serve
-
-# SPA Frameworks
-npm i -g create-react-app
 
 # Finished Msg
 Write-Host "Finished Software installation" -ForegroundColor yellow
