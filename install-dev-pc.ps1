@@ -1,4 +1,6 @@
-# Settings vars
+# Execute: Set-ExecutionPolicy in an elevated PowerShell Prompt
+
+# GitHub Settings vars
 $User="Alexander Pajer"
 $EMAIL="alexander.pajer@integrations.at"
 
@@ -40,7 +42,6 @@ choco install telegram -y
 choco install signal -y
 choco install googlephotos -y
 choco install spotify -y
-choco install sql-server-management-studio -y
 
 # Refresh Path Env
 Write-Host "Refresh Path Env - 4/6" -ForegroundColor yellow
@@ -77,6 +78,7 @@ code --install-extension msazurermtools.azurerm-vscode-tools
 code --install-extension mdickin.markdown-shortcuts
 code --install-extension mhutchie.git-graph 
 code --install-extension humao.rest-client
+code --install-extension ms-vscode-remote.remote-containers
 
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 

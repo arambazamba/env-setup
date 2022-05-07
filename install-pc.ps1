@@ -1,6 +1,8 @@
-# Settings vars
-$User="Ernst Stöger"
-$EMAIL="ernst.stoeger@integrations.at"
+# Execute: Set-ExecutionPolicy in an elevated PowerShell Prompt
+
+# GitHub Settings vars
+$User="Alexander Pajer"
+$EMAIL="alexander.pajer@integrations.at"
 
 # Install chocolatey
 Write-Host "Installing Chocolatey - 1/6" -ForegroundColor yellow
