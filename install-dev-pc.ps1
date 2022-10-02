@@ -25,7 +25,7 @@ Write-Host "Refresh Path Env - 3/6" -ForegroundColor yellow
 
 choco install dotnetcore-sdk -y
 choco install dotnet-6.0-sdk -y
-choco install nodejs --version=14.15.0 -y
+choco install nodejs --version=16.10.0 -y
 choco install azure-cli -y
 choco install azurepowershell -y
 choco install microsoftazurestorageexplorer -y
@@ -40,6 +40,7 @@ choco install microsoft-teams -y
 choco install microsoft-windows-terminal -y
 choco install googlephotos -y
 choco install filezilla -y
+choco install snagit -y 
 
 # Refresh Path Env
 Write-Host "Refresh Path Env - 4/6" -ForegroundColor yellow
@@ -71,19 +72,16 @@ code --install-extension ms-azuretools.vscode-azurefunctions
 code --install-extension ms-azuretools.vscode-azurestaticwebapps
 code --install-extension GitHub.vscode-pull-request-github
 code --install-extension redhat.vscode-yaml
-code --install-extension bencoleman.armview
-code --install-extension msazurermtools.azurerm-vscode-tools
 code --install-extension mdickin.markdown-shortcuts
-code --install-extension mhutchie.git-graph 
 code --install-extension humao.rest-client
 code --install-extension ms-vscode-remote.remote-containers
 
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 
 # Install Node
-nvm install 12.20.0
-nvm install 14.18.0
-nvm use 14.18.0
+# nvm install 12.20.0
+# nvm install 14.18.0
+# nvm use 14.18.0
 
 # Install Azure Function Core Tools
 npm install -g azure-functions-core-tools@4 --unsafe-perm true
@@ -103,7 +101,6 @@ npm i -g gulp yo @microsoft/generator-sharepoint
 npm i -g @pnp/cli-microsoft365
 npm i -g generator-teams
 npm i -g yo generator-office
-npm i -g spfx-fast-serve
 
 # SPA Frameworks
 npm i -g create-react-app
